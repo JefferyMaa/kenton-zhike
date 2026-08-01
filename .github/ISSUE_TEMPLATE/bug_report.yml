@@ -1,0 +1,59 @@
+name: 问题报告
+description: 报告可复现的知客使用问题（不要提交卡密或登录信息）
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先确认你使用的是当前正式版。不要提交卡密、Cookie、二维码、账号登录目录、完整业务数据或未脱敏日志。
+  - type: input
+    id: version
+    attributes:
+      label: 知客版本
+      placeholder: v2.1.0
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 与芯片
+      placeholder: macOS 15.x / Apple M2
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 问题阶段
+      options:
+        - 安装或启动
+        - 卡密激活
+        - 扫码登录
+        - 业务问答
+        - 评论预览
+        - 发送确认或状态回读
+        - 数据导出、恢复或清除
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 请写最少可复现步骤，并去除账号与个人信息。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期与实际结果
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我确认未提交卡密、Cookie、二维码、登录态目录、完整业务数据或其他个人信息。
+          required: true
