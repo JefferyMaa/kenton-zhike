@@ -17,12 +17,12 @@ status: active
 
 当前版本需要：
 
-- Mac Apple Silicon；
+- Mac Apple Silicon 或 Windows x64；
 - 可正常访问软件安装源、知客授权服务和抖音的网络；
 - 自己的抖音账号；
 - 有效的知客在线卡密。
 
-如果你需要 Windows、无需人工审核的全自动直发、私信读取、云端大模型自由生成回复，或承诺零平台风险，当前版本不适合。
+如果你需要无需人工审核的全自动直发、私信读取、云端大模型自由生成回复，或承诺零平台风险，当前版本不适合。
 
 > 知客是第三方独立工具，与抖音（字节跳动）官方无关联，也未获得其授权或背书。任何自动化操作都可能触发平台规则或账号风险。
 
@@ -30,11 +30,13 @@ status: active
 
 版本：`v2.1.0`
 
-平台：macOS Apple Silicon
+平台：macOS Apple Silicon / Windows x64
 
 发行方式：公开下载安装包，核心业务功能必须使用在线卡密激活
 
 源码状态：商业软件，本仓库不是开源源码仓库
+
+### macOS Apple Silicon
 
 - [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip)
 - [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
@@ -44,10 +46,20 @@ status: active
 47758843ea05e84f3a4e45fe6de4df8f5d64178b67238b691fef8161f7ab8399
 ```
 
+### Windows x64
+
+- [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip.sha256)
+
+```text
+c90b0289b4aa02bcbc2b52b2580a188603912b210869877b7049a9f880bfa814
+```
+
 ## 5 分钟首次使用
 
 1. 下载 ZIP 并核对 SHA-256。
-2. 解压后双击 `启动.command`；如果 macOS 首次阻止打开，请在 Finder 中右键该文件并选择“打开”。
+2. 解压后运行启动器：macOS 双击 `启动.command`（首次被阻止时在 Finder 中右键该文件并选择“打开”）；Windows 双击 `启动.bat`。
 3. 等待首次环境准备完成。软件会安装哈希锁定的 Python 依赖并下载 Chromium，后续启动会复用本地环境。
 4. 在本地页面输入购买时收到的卡密完成激活。
 5. 扫码登录自己的抖音账号，填写业务问答，先生成逐条预览。
@@ -84,11 +96,11 @@ status: active
 
 ## 已知边界
 
-- 当前只交付 Mac Apple Silicon 版本；Windows 发行通道未开放。
-- 当前 ZIP 通过 `启动.command` 运行，不是 Apple 公证的 `.app` 安装包。
+- 当前交付 Mac Apple Silicon 与 Windows x64 两个版本。
+- ZIP 通过 `启动.command` / `启动.bat` 运行：macOS 侧不是 Apple 公证的 `.app` 安装包；Windows 侧未做代码签名，SmartScreen 可能提示。
 - 关键词匹配仍可能误命中，发送前必须人工审核。
 - 抖音页面、接口或平台规则变化可能导致功能失效。
-- 在线卡密属于软授权；明文 Python 不能阻止有本机管理权限和逆向能力的人修改代码，因此不承诺“无法破解”。
+- 在线卡密属于软授权；macOS 版为明文 Python，Windows 版核心模块经 PyArmor 加密，但都不能阻止有本机管理权限和逆向能力的人分析修改，因此不承诺“无法破解”。
 - 使用软件不代表平台允许自动化，也不代表账号不会受到限制。
 
 ## 文档

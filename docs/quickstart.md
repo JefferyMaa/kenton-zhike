@@ -4,12 +4,12 @@
 
 ## 1. 准备条件
 
-- Mac Apple Silicon。打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`。
+- Mac Apple Silicon（打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`）或 Windows x64。
 - 稳定网络。首次启动需要下载固定版本 Python 依赖和 Chromium。
 - 自己的抖音账号和手机 App，用于扫码登录。
 - 有效知客卡密。购买入口见[知客官网](https://zhike.crewup.cn/#buy)。
 
-当前没有可交付的 Windows 版本。
+Windows x64 版本已同步发行：下载[知客官网 Windows ZIP](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)，核对 SHA-256（`c90b0289b4aa02bcbc2b52b2580a188603912b210869877b7049a9f880bfa814`，PowerShell 执行 `Get-FileHash` 查看），解压后双击 `启动.bat`。本指南其余步骤以 macOS 为例，两个平台的激活与使用流程一致。
 
 ## 2. 下载正式包
 
