@@ -1,10 +1,3 @@
----
-name: Zhike
-origin: Kenton
-type: public-distribution
-status: active
----
-
 # Zhike (知客)
 
 [English](README.en.md) | [简体中文](README.md)
@@ -120,3 +113,5 @@ To purchase a license key, use the contact channels published on the [official s
 ## License
 
 This repository publishes release notes and user documentation; it does not grant the software under an open-source license. Use of the software, documentation, and release packages is governed by [LICENSE](LICENSE) and the Software License & Service Terms included in the package; third-party components are governed by their own licenses.
+
+<!-- name: Zhike | origin: Kenton | type: public-distribution | status: active -->

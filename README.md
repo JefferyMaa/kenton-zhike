@@ -1,10 +1,3 @@
----
-name: 知客
-origin: Kenton
-type: public-distribution
-status: active
----
-
 # 知客
 
 [English](README.en.md) | [简体中文](README.md)
@@ -120,3 +113,5 @@ c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 ## 许可
 
 本仓库公开的是发行说明与用户文档，不代表软件以开源许可证授权。软件、文档和发行包的使用受 [LICENSE](LICENSE) 及安装包内《软件授权与服务条款》约束；第三方组件适用各自许可证。
+
+<!-- name: 知客 | origin: Kenton | type: public-distribution | status: active -->
