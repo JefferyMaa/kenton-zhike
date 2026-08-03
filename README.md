@@ -7,6 +7,8 @@ status: active
 
 # 知客
 
+[English](README.en.md) | [简体中文](README.md)
+
 知客是一款面向中国抖音创作者的 macOS / Windows 本地评论辅助工具。它读取未回复的公开评论，只从你配置的业务问答中匹配拟回复；你逐条预览并确认审核批次后，软件才发送这批内容。
 
 ![知客 v2.1.0 未激活页面，核心业务步骤保持锁定](docs/assets/zhike-v2.1.0-activation.jpg)
