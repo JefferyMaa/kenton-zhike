@@ -9,7 +9,7 @@
 - 自己的抖音账号和手机 App，用于扫码登录。
 - 有效知客卡密。购买入口见[知客官网](https://zhike.crewup.cn/#buy)。
 
-Windows x64 版本已同步发行：下载[知客官网 Windows ZIP](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)，核对 SHA-256（`c90b0289b4aa02bcbc2b52b2580a188603912b210869877b7049a9f880bfa814`，PowerShell 执行 `Get-FileHash` 查看），解压后双击 `启动.bat`。本指南其余步骤以 macOS 为例，两个平台的激活与使用流程一致。
+Windows x64 版本已同步发行：下载[知客官网 Windows ZIP](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)，核对 SHA-256（`c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2`，PowerShell 执行 `Get-FileHash` 查看），解压后双击 `启动.bat`。本指南其余步骤以 macOS 为例，两个平台的激活与使用流程一致。
 
 ## 2. 下载正式包
 
