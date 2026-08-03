@@ -1,34 +1,34 @@
-# 知客
+# Zhike (知客)
 
-[English](README.en.md) | [简体中文](README.md)
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-知客是抖音评论区的自动接待员（macOS / Windows 本地软件）。它自动巡查你账号下的作品评论，按你配置的业务话术自动匹配、自动回复——在你设定的活跃时段内持续值守，护栏内建，数据全在本机。
+Zhike is an automated front desk for your Douyin comment section (local software for macOS / Windows). It automatically patrols the comments under your videos, matches them against your business scripts, and replies automatically — standing watch during your configured active hours, with built-in guardrails, and all data kept on your own machine.
 
-![知客 v2.1.0 未激活页面，核心业务步骤保持锁定](docs/assets/zhike-v2.1.0-activation.jpg)
+![Zhike v2.1.0 activation page — core business steps stay locked until activated](docs/assets/zhike-v2.1.0-activation.jpg)
 
-## 它能做什么
+## What it does
 
-- **自动巡查**：按计划扫描你的全部作品，自动发现未回复的公开评论；有评论的作品优先，新发作品兜底，不漏老视频。
-- **自动匹配话术**：本地业务问答库（账号话术 + 作品问答 + FAQ）即时生成回复；价格、购买方式、合作等关键问题按你写好的固定答案回，不跑偏。
-- **自动执行**：开启「每小时自动巡查」后，软件在活跃时段内每小时自动跑一轮、生成整批回复，你一键放行；随机间隔模拟真人节奏。
-- **全自动值守（进阶）**：安装包内附带定时执行器 `comment_cron.py`，接入系统计划任务后可免点击自动执行，护栏全部生效。
-- **护栏内建**：每日上限硬封顶、发送账本去重（同一条评论绝不重复回）、北京时间活跃时段、发送结果三态（已确认 / 未知 / 失败），未知状态不盲目重试。
-- **多账号隔离**：登录态、话术、配额、发送账本按账号各管各的。
-- **数据留在本机**：支持一键导出、恢复、清除；不上传你的业务数据。
+- **Automatic patrol**: scans all your videos on schedule and finds unreplied public comments; videos with comments come first, fresh uploads are covered too, old videos are not missed.
+- **Automatic script matching**: a local business Q&A library (account scripts + per-video Q&A + FAQ) generates replies instantly; price, purchase, and partnership questions get your exact pre-written answers, no drifting.
+- **Automatic execution**: with "hourly auto-patrol" on, Zhike runs a full round every hour during active hours and prepares the whole reply batch — you release it with one click; randomized intervals mimic a human rhythm.
+- **Fully unattended mode (advanced)**: the package ships with a scheduled executor, `comment_cron.py`; hook it into your system scheduler and it runs with no clicks at all, with every guardrail still enforced.
+- **Built-in guardrails**: hard daily cap, send-ledger dedup (the same comment is never replied to twice), Beijing-time active hours, three-state send results (confirmed / unknown / failed) — unknown results are never blindly retried.
+- **Multi-account isolation**: login state, scripts, quotas, and send ledgers are kept separate per account.
+- **Data stays local**: one-click export, restore, and wipe; your business data is never uploaded.
 
-私信接待在产品路线图上，后续版本推进。
+Direct-message handling is on the product roadmap for upcoming versions.
 
-## 当前正式版
+## Current stable release
 
-版本：`v2.1.0`　平台：macOS Apple Silicon / Windows x64
+Version: `v2.1.0`　Platforms: macOS Apple Silicon / Windows x64
 
-安装包公开下载，核心业务功能使用在线卡密激活。
+The installer is a public download; core business features activate with an online license key.
 
 ### macOS Apple Silicon
 
-- [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip.sha256)
+- [Download v2.1.0 from the official site](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip)
+- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
+- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip.sha256)
 
 ```text
 47758843ea05e84f3a4e45fe6de4df8f5d64178b67238b691fef8161f7ab8399
@@ -36,54 +36,54 @@
 
 ### Windows x64
 
-- [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip.sha256)
+- [Download v2.1.0 from the official site](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)
+- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
+- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip.sha256)
 
 ```text
 c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 ```
 
-## 5 分钟上手
+## Up and running in 5 minutes
 
-1. 下载 ZIP，核对 SHA-256。
-2. 解压运行启动器：macOS 双击 `启动.command`（首次被阻止时右键选「打开」）；Windows 双击 `启动.bat`。
-3. 等首次环境准备完成（自动安装哈希锁定的依赖和 Chromium，之后启动秒开）。
-4. 在本地页面输入卡密激活。
-5. 扫码登录抖音，填好业务话术。
-6. 点「预览」看第一批回复效果，放行；之后开「每小时自动巡查」交给它值守。
+1. Download the ZIP and verify its SHA-256.
+2. Unzip and run the launcher: double-click `启动.command` on macOS (right-click → "Open" if blocked on first run); double-click `启动.bat` on Windows.
+3. Wait for first-time setup (hash-locked dependencies and Chromium install automatically; later launches are instant).
+4. Enter your license key on the local page to activate.
+5. Scan the QR code to log in to Douyin and fill in your business scripts.
+6. Hit "Preview" to check the first batch, release it — then switch on hourly auto-patrol and let it stand watch.
 
-完整步骤见[首次使用指南](docs/quickstart.md)。
+Full walkthrough: [Quickstart guide](docs/quickstart.md) (Chinese).
 
-## 卡密与联网边界
+## License key and network boundary
 
-下载软件不等于获得使用授权。未激活时只开放启动诊断、授权激活/状态和本机数据导出清除，其余业务 API 默认拒绝。授权码、产品标识和设备标识会在激活、启动及运行中定期发送到知客授权服务器，用于设备绑定、到期与吊销判断；运行中最长约 1 小时刷新一次状态。
+Downloading the software does not grant a usage license. Before activation, only startup diagnostics, license activation/status, and local data export/wipe are available; every other business API is rejected by default. The license key, product ID, and device ID are sent to the Zhike license server during activation, at startup, and periodically at runtime for device binding, expiry, and revocation checks; the runtime refresh window is at most about 1 hour.
 
-## 数据与隐私
+## Data and privacy
 
-平台登录态、业务话术、评论处理记录和发送账本默认保存在你自己的电脑上，不发送给知客授权服务器，也不发给外部大模型。软件联网只访问三处：抖音（你发起的登录与评论操作）、依赖与 Chromium 下载源（首次安装）、知客授权服务（卡密验证）。公开评论可能涉及第三方个人信息，请按适用法律法规使用。
+Platform login state, business scripts, comment-processing records, and the send ledger live on your own computer by default; they are not sent to the Zhike license server or to any external LLM. The software talks to exactly three places: Douyin (for the login and comment operations you initiate), the dependency/Chromium download sources (first-time setup), and the Zhike license service (key verification). Public comments may contain third-party personal information; use the tool in compliance with applicable laws.
 
-## 边界
+## Boundaries
 
-- 知客是第三方独立工具，与抖音（字节跳动）官方无关联；自动化操作存在平台规则与账号风险，请自行评估。
-- 关键词匹配可能误命中，重要话术建议先用预览模式把关。
-- 抖音页面或接口改版可能影响功能，我们随版本跟进。
-- macOS 侧非 Apple 公证 `.app`，Windows 侧未做代码签名（SmartScreen 可能提示）；两端均为明文 Python 软授权，不承诺防逆向。
+- Zhike is an independent third-party tool with no affiliation with Douyin (ByteDance); automation carries platform-rule and account risk — assess it yourself.
+- Keyword matching can mis-hit; for high-stakes scripts, use preview mode to gate the first rounds.
+- Douyin page or API changes may affect functionality; we track them with releases.
+- The macOS build is not an Apple-notarized `.app`; the Windows build is unsigned (SmartScreen may warn). Both ship as plaintext Python under a soft license — no anti-reverse-engineering claims.
 
-## 文档
+## Documentation
 
-- [首次使用指南](docs/quickstart.md)
-- [故障排查](docs/troubleshooting.md)
-- [安全政策](SECURITY.md)
-- [v2.1.0 发布说明](docs/releases/v2.1.0.md)
-- [知客官网](https://zhike.crewup.cn/)
+- [Quickstart guide](docs/quickstart.md) (Chinese)
+- [Troubleshooting](docs/troubleshooting.md) (Chinese)
+- [Security policy](SECURITY.md)
+- [v2.1.0 release notes](docs/releases/v2.1.0.md) (Chinese)
+- [Official site](https://zhike.crewup.cn/)
 
-## 获取卡密与支持
+## Purchase and support
 
-购买卡密走[知客官网](https://zhike.crewup.cn/#buy)公布的联系方式。使用问题可提 GitHub Issue，请勿上传卡密、Cookie、登录态目录或完整日志。
+To buy a license key, use the contact channels on the [official site](https://zhike.crewup.cn/#buy). Open a GitHub Issue for usage problems, but never upload license keys, cookies, login-state directories, or full logs.
 
-## 许可
+## License
 
-本仓库公开发行说明与用户文档，软件本身不以开源许可证授权。软件、文档和发行包的使用受 [LICENSE](LICENSE) 及安装包内《软件授权与服务条款》约束；第三方组件适用各自许可证。
+This repository publishes release notes and user documentation; the software itself is not open-source licensed. Use is governed by [LICENSE](LICENSE) and the Software License & Service Terms inside the package; third-party components keep their own licenses.
 
-<!-- name: 知客 | origin: Kenton | type: public-distribution | status: active -->
+<!-- name: Zhike | origin: Kenton | type: public-distribution | status: active -->
