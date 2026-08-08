@@ -12,14 +12,14 @@ body:
     id: version
     attributes:
       label: 知客版本
-      placeholder: v2.1.0
+      placeholder: v2.1.5
     validations:
       required: true
   - type: input
-    id: macos
+    id: system
     attributes:
-      label: macOS 与芯片
-      placeholder: macOS 15.x / Apple M2
+      label: 操作系统与架构
+      placeholder: macOS 15.x / Apple M2，或 Windows 11 / x64
     validations:
       required: true
   - type: dropdown
@@ -31,8 +31,8 @@ body:
         - 卡密激活
         - 扫码登录
         - 业务问答
-        - 评论预览
-        - 发送确认或状态回读
+        - 自动运行
+        - 发送状态回读
         - 数据导出、恢复或清除
         - 其他
     validations:

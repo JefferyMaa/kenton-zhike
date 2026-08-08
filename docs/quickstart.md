@@ -4,49 +4,74 @@
 
 ## 1. 准备条件
 
-- Mac Apple Silicon（打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`）。
+- Mac Apple Silicon（打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`），或 Windows 10/11 x64。
 - 稳定网络。首次启动需要下载固定版本 Python 依赖和 Chromium。
 - 自己的抖音账号和手机 App，用于扫码登录。
 - 有效知客卡密。购买入口见[知客官网](https://zhike.crewup.cn/#buy)。
-
-Windows v2.1.2 暂未开放新用户交付；v2.1.0 旧包只供已激活的同一设备恢复使用，不接受新设备首次激活。
 
 ## 2. 下载正式包
 
 从以下任一入口下载：
 
-- [知客官网 v2.1.2 ZIP](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip)
-- [GitHub Release v2.1.2](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.2)
+- [知客官网 macOS v2.1.5 ZIP](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip)
+- [知客官网 Windows v2.1.5 ZIP](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip)
+- [GitHub Release v2.1.5](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
 
-文件名应为：
+官网下载使用中文文件名：
 
 ```text
-知客-v2.1.2-macos-arm64.zip
+知客-v2.1.5-macos-arm64.zip
+知客-v2.1.5-windows-x64.zip
 ```
+
+GitHub Release 使用 ASCII 文件名：
+
+```text
+Zhike-v2.1.5-macos-arm64.zip
+Zhike-v2.1.5-windows-x64.zip
+```
+
+同一平台的中文包与 ASCII 包字节完全相同，SHA-256 也必须相同。
 
 ## 3. 核对 SHA-256
 
-假设文件位于“下载”目录：
+macOS 假设文件位于“下载”目录：
 
 ```bash
-shasum -a 256 "$HOME/Downloads/知客-v2.1.2-macos-arm64.zip"
+shasum -a 256 "$HOME/Downloads/知客-v2.1.5-macos-arm64.zip"
+# 从 GitHub 下载时改用：
+shasum -a 256 "$HOME/Downloads/Zhike-v2.1.5-macos-arm64.zip"
 ```
 
 输出的第一列必须是：
 
 ```text
-8c77de94835bdcce37ac745481c01d5ecb8b8958d46e1ac9d34f183543b742c2
+337a3b8b2ac644ba1f5ea1ac22ffa9a561f086f40db46d05d0f5f88f8174371d
+```
+
+Windows 在 PowerShell 中运行：
+
+```powershell
+$File = "$HOME\Downloads\知客-v2.1.5-windows-x64.zip"
+# 从 GitHub 下载时改为：$File = "$HOME\Downloads\Zhike-v2.1.5-windows-x64.zip"
+(Get-FileHash $File -Algorithm SHA256).Hash.ToLower()
+```
+
+输出必须是：
+
+```text
+6c2319bd102ae57e5786a2d9e11f577deb631e8b8d8ed4f31984b99f4b5f5f60
 ```
 
 不一致时不要继续运行，请重新下载并再次核对。
 
 ## 4. 首次启动
 
-1. 双击 ZIP 解压。
-2. 打开“知客”文件夹，双击 `启动.command`。
-3. 如果 macOS 阻止首次打开，请在 Finder 中右键 `启动.command`，选择“打开”，再确认一次。
-4. 保持终端窗口开启。首次准备运行环境需要数分钟，具体时间取决于网络。
-5. 看到浏览器打开 `http://127.0.0.1:8300` 且显示“知客”后，表示本机服务已启动。
+1. 先把 ZIP 完整解压，不要在压缩包预览窗口里直接运行。
+2. macOS 首次在 Finder 中右键 `启动.command`，选择“打开”并确认；如果仍被阻止，到「系统设置 → 隐私与安全性」点「仍要打开」。不要关闭 Gatekeeper，也不要运行移除 quarantine 的命令。
+3. Windows 双击 `启动.bat`；普通 SmartScreen 提示可选「更多信息 → 仍要运行」。如果 Smart App Control 直接阻止，当前未签名版无法运行，请勿为知客关闭系统安全功能，改为联系购买渠道处理。
+4. 保持启动窗口开启。首次准备运行环境需要数分钟，具体时间取决于网络。
+5. 看到浏览器打开 `http://127.0.0.1:8300` 且显示“知客 2.1.5”后，表示本机服务已启动。
 
 知客只监听本机地址。关闭启动终端窗口会停止软件。
 

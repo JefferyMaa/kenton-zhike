@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-知客是抖音评论区的自动接待员（当前新用户正式版为 macOS Apple Silicon）。它自动巡查你账号下的作品评论，按你配置的业务话术自动匹配、自动回复——在你设定的活跃时段内持续值守，护栏内建，数据全在本机。
+知客是抖音评论区的自动接待员，支持 macOS Apple Silicon 与 Windows x64。它自动巡查你账号下的作品评论，按你配置的业务话术自动匹配、自动回复——在你设定的活跃时段内持续值守，护栏内建，数据全在本机。
 
 ![知客 v2.1.0 未激活页面，核心业务步骤保持锁定](docs/assets/zhike-v2.1.0-activation.jpg)
 
@@ -19,36 +19,34 @@
 
 ## 当前正式版
 
-版本：`v2.1.2`　新用户平台：macOS Apple Silicon
+版本：`v2.1.5`　平台：macOS Apple Silicon、Windows x64
 
 安装包公开下载，核心业务功能使用在线卡密激活。
 
 ### macOS Apple Silicon
 
-- [从知客官网下载 v2.1.2](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.2)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip.sha256)
+- [从知客官网下载 v2.1.5](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip.sha256)
 
 ```text
-8c77de94835bdcce37ac745481c01d5ecb8b8958d46e1ac9d34f183543b742c2
+337a3b8b2ac644ba1f5ea1ac22ffa9a561f086f40db46d05d0f5f88f8174371d
 ```
 
-### Windows x64（仅已有用户恢复）
+### Windows x64
 
-v2.1.2 暂未开放 Windows 新用户交付。下面的 v2.1.0 旧包只供已经激活的同一设备恢复使用，不接受新设备首次激活。
-
-- [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip.sha256)
+- [从知客官网下载 v2.1.5](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip.sha256)
 
 ```text
-c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
+6c2319bd102ae57e5786a2d9e11f577deb631e8b8d8ed4f31984b99f4b5f5f60
 ```
 
 ## 5 分钟上手
 
 1. 下载 ZIP，核对 SHA-256。
-2. 解压运行启动器：macOS 双击 `启动.command`（首次被阻止时右键选「打开」）；Windows 双击 `启动.bat`。
+2. 解压运行启动器：macOS 首次右键 `启动.command` 选「打开」，若仍被拦，到「系统设置 → 隐私与安全性」点「仍要打开」；Windows 双击 `启动.bat`，普通 SmartScreen 提示可选「更多信息 → 仍要运行」。如果 Windows 11 的 Smart App Control 直接阻止，当前未签名版不兼容，请勿为知客关闭系统安全功能。
 3. 等首次环境准备完成（自动安装哈希锁定的依赖和 Chromium，之后启动秒开）。
 4. 在本地页面输入卡密激活。
 5. 扫码登录抖音，填好业务话术。
@@ -69,14 +67,14 @@ c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 - 知客是第三方独立工具，与抖音（字节跳动）官方无关联；自动化操作存在平台规则与账号风险，请自行评估。
 - 关键词匹配可能误命中，请只配置准确、仍然有效的话术，并定期检查评论区和发送账本。
 - 抖音页面或接口改版可能影响功能，我们随版本跟进。
-- macOS 侧非 Apple 公证 `.app`，Windows 侧未做代码签名（SmartScreen 可能提示）；两端均为明文 Python 软授权，不承诺防逆向。
+- macOS 侧未做 Apple 公证，Windows 侧未做代码签名（SmartScreen 可能提示，Smart App Control 可能直接阻止）；请勿为了运行知客关闭系统安全功能。两端均为明文 Python 软授权，不承诺防逆向。
 
 ## 文档
 
 - [首次使用指南](docs/quickstart.md)
 - [故障排查](docs/troubleshooting.md)
 - [安全政策](SECURITY.md)
-- [v2.1.2 发布说明](docs/releases/v2.1.2.md)
+- [v2.1.5 发布说明](docs/releases/v2.1.5.md)
 - [知客官网](https://zhike.crewup.cn/)
 
 ## 获取卡密与支持
