@@ -1,27 +1,27 @@
 # 知客首次使用指南
 
-本指南服务第一次成功运行：下载并验证安装包，完成卡密激活和抖音登录，看到一批可人工检查的拟回复。
+本指南服务第一次成功运行：下载并验证安装包，阅读并确认使用须知，完成卡密激活和抖音登录，再启动全自动评论回复。
 
 ## 1. 准备条件
 
-- Mac Apple Silicon（打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`）或 Windows x64。
+- Mac Apple Silicon（打开“关于本机”可查看芯片类型；终端执行 `uname -m` 应输出 `arm64`）。
 - 稳定网络。首次启动需要下载固定版本 Python 依赖和 Chromium。
 - 自己的抖音账号和手机 App，用于扫码登录。
 - 有效知客卡密。购买入口见[知客官网](https://zhike.crewup.cn/#buy)。
 
-Windows x64 版本已同步发行：下载[知客官网 Windows ZIP](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)，核对 SHA-256（`c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2`，PowerShell 执行 `Get-FileHash` 查看），解压后双击 `启动.bat`。本指南其余步骤以 macOS 为例，两个平台的激活与使用流程一致。
+Windows v2.1.2 暂未开放新用户交付；v2.1.0 旧包只供已激活的同一设备恢复使用，不接受新设备首次激活。
 
 ## 2. 下载正式包
 
 从以下任一入口下载：
 
-- [知客官网 v2.1.0 ZIP](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip)
-- [GitHub Release v2.1.0](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
+- [知客官网 v2.1.2 ZIP](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip)
+- [GitHub Release v2.1.2](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.2)
 
 文件名应为：
 
 ```text
-知客-v2.1.0-macos-arm64.zip
+知客-v2.1.2-macos-arm64.zip
 ```
 
 ## 3. 核对 SHA-256
@@ -29,13 +29,13 @@ Windows x64 版本已同步发行：下载[知客官网 Windows ZIP](https://zhi
 假设文件位于“下载”目录：
 
 ```bash
-shasum -a 256 "$HOME/Downloads/知客-v2.1.0-macos-arm64.zip"
+shasum -a 256 "$HOME/Downloads/知客-v2.1.2-macos-arm64.zip"
 ```
 
 输出的第一列必须是：
 
 ```text
-47758843ea05e84f3a4e45fe6de4df8f5d64178b67238b691fef8161f7ab8399
+8c77de94835bdcce37ac745481c01d5ecb8b8958d46e1ac9d34f183543b742c2
 ```
 
 不一致时不要继续运行，请重新下载并再次核对。
@@ -52,7 +52,7 @@ shasum -a 256 "$HOME/Downloads/知客-v2.1.0-macos-arm64.zip"
 
 ## 5. 激活卡密
 
-在“授权”步骤粘贴完整卡密并点击“激活”。成功后页面才会进入扫码登录和业务配置步骤。
+先阅读页面中的四点摘要及《使用须知》《软件授权与服务条款》《隐私说明》，主动勾选确认，再粘贴完整卡密并点击“激活”。成功后页面才会进入扫码登录和业务配置步骤。
 
 软件会在激活、启动和运行中定期联网复核卡密、设备、有效期与吊销状态。未激活时，业务功能保持锁定；本机数据导出和清除仍可使用。
 
@@ -65,16 +65,16 @@ shasum -a 256 "$HOME/Downloads/知客-v2.1.0-macos-arm64.zip"
 
 当前产品只处理公开评论，不读取或存储私信。
 
-## 7. 第一次安全预览
+## 7. 启动全自动回复
 
 首次运行时保留默认稳健设置：
 
-1. 先抓取少量未回复评论并生成预览。
-2. 逐条检查作品、用户、原评论、匹配来源和拟回复。
-3. 确认没有误命中后，再创建一次性审核批次并发送。
+1. 核对业务问答中的价格、购买方式和合作话术仍然准确。
+2. 点“立即自动跑一次”会马上匹配并发送。
+3. 开启“每小时自动巡查”后，软件会在活跃时段内每小时完成同一流程，无需逐批确认；关闭开关后不会开始新一轮。
 4. 如果发送结果显示“未知”，不要再次发送；先人工回读平台状态。
 
-当页面能展示来自自己账号的评论预览，而且未确认前没有执行发送，就完成了首次成功路径。
+当运行记录显示本轮已完成，并且抖音评论区能读回对应回复，就完成了首次成功路径。
 
 ## 8. 使用后备份
 

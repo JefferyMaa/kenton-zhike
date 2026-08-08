@@ -2,7 +2,7 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-知客是抖音评论区的自动接待员（macOS / Windows 本地软件）。它自动巡查你账号下的作品评论，按你配置的业务话术自动匹配、自动回复——在你设定的活跃时段内持续值守，护栏内建，数据全在本机。
+知客是抖音评论区的自动接待员（当前新用户正式版为 macOS Apple Silicon）。它自动巡查你账号下的作品评论，按你配置的业务话术自动匹配、自动回复——在你设定的活跃时段内持续值守，护栏内建，数据全在本机。
 
 ![知客 v2.1.0 未激活页面，核心业务步骤保持锁定](docs/assets/zhike-v2.1.0-activation.jpg)
 
@@ -10,8 +10,7 @@
 
 - **自动巡查**：按计划扫描你的全部作品，自动发现未回复的公开评论；有评论的作品优先，新发作品兜底，不漏老视频。
 - **自动匹配话术**：本地业务问答库（账号话术 + 作品问答 + FAQ）即时生成回复；价格、购买方式、合作等关键问题按你写好的固定答案回，不跑偏。
-- **自动执行**：开启「每小时自动巡查」后，软件在活跃时段内每小时自动跑一轮、生成整批回复，你一键放行；随机间隔模拟真人节奏。
-- **全自动值守（进阶）**：安装包内附带定时执行器 `comment_cron.py`，接入系统计划任务后可免点击自动执行，护栏全部生效。
+- **全自动执行**：开启「每小时自动巡查」后，软件在活跃时段内每小时自动匹配并发送，无需逐批确认；也可点「立即自动跑一次」。
 - **护栏内建**：每日上限硬封顶、发送账本去重（同一条评论绝不重复回）、北京时间活跃时段、发送结果三态（已确认 / 未知 / 失败），未知状态不盲目重试。
 - **多账号隔离**：登录态、话术、配额、发送账本按账号各管各的。
 - **数据留在本机**：支持一键导出、恢复、清除；不上传你的业务数据。
@@ -20,21 +19,23 @@
 
 ## 当前正式版
 
-版本：`v2.1.0`　平台：macOS Apple Silicon / Windows x64
+版本：`v2.1.2`　新用户平台：macOS Apple Silicon
 
 安装包公开下载，核心业务功能使用在线卡密激活。
 
 ### macOS Apple Silicon
 
-- [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-macos-arm64.zip.sha256)
+- [从知客官网下载 v2.1.2](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.2)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.2/%E7%9F%A5%E5%AE%A2-v2.1.2-macos-arm64.zip.sha256)
 
 ```text
-47758843ea05e84f3a4e45fe6de4df8f5d64178b67238b691fef8161f7ab8399
+8c77de94835bdcce37ac745481c01d5ecb8b8958d46e1ac9d34f183543b742c2
 ```
 
-### Windows x64
+### Windows x64（仅已有用户恢复）
+
+v2.1.2 暂未开放 Windows 新用户交付。下面的 v2.1.0 旧包只供已经激活的同一设备恢复使用，不接受新设备首次激活。
 
 - [从知客官网下载 v2.1.0](https://zhike.crewup.cn/dl/windows/2.1.0/%E7%9F%A5%E5%AE%A2-v2.1.0-windows-x64.zip)
 - [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.0)
@@ -51,7 +52,7 @@ c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 3. 等首次环境准备完成（自动安装哈希锁定的依赖和 Chromium，之后启动秒开）。
 4. 在本地页面输入卡密激活。
 5. 扫码登录抖音，填好业务话术。
-6. 点「预览」看第一批回复效果，放行；之后开「每小时自动巡查」交给它值守。
+6. 点「立即自动跑一次」马上匹配并发送，或开启「每小时自动巡查」持续值守；无需逐批确认。
 
 完整步骤见[首次使用指南](docs/quickstart.md)。
 
@@ -66,7 +67,7 @@ c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 ## 边界
 
 - 知客是第三方独立工具，与抖音（字节跳动）官方无关联；自动化操作存在平台规则与账号风险，请自行评估。
-- 关键词匹配可能误命中，重要话术建议先用预览模式把关。
+- 关键词匹配可能误命中，请只配置准确、仍然有效的话术，并定期检查评论区和发送账本。
 - 抖音页面或接口改版可能影响功能，我们随版本跟进。
 - macOS 侧非 Apple 公证 `.app`，Windows 侧未做代码签名（SmartScreen 可能提示）；两端均为明文 Python 软授权，不承诺防逆向。
 
@@ -75,7 +76,7 @@ c723ad4bc70f59ffbcd273df3456dde51b9984bf3fc7923b0375feed8d3921a2
 - [首次使用指南](docs/quickstart.md)
 - [故障排查](docs/troubleshooting.md)
 - [安全政策](SECURITY.md)
-- [v2.1.0 发布说明](docs/releases/v2.1.0.md)
+- [v2.1.2 发布说明](docs/releases/v2.1.2.md)
 - [知客官网](https://zhike.crewup.cn/)
 
 ## 获取卡密与支持
