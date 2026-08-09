@@ -13,54 +13,54 @@
 
 从以下任一入口下载：
 
-- [知客官网 macOS v2.1.5 ZIP](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip)
-- [知客官网 Windows v2.1.5 ZIP](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip)
-- [GitHub Release v2.1.5](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
+- [知客官网 macOS v2.1.7 ZIP](https://zhike.crewup.cn/dl/macos/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-macos-arm64.zip)
+- [知客官网 Windows v2.1.7 ZIP](https://zhike.crewup.cn/dl/windows/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-windows-x64.zip)
+- [GitHub Release v2.1.7](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.7)
 
 官网下载使用中文文件名：
 
 ```text
-知客-v2.1.5-macos-arm64.zip
-知客-v2.1.5-windows-x64.zip
+知客-v2.1.7-macos-arm64.zip
+知客-v2.1.7-windows-x64.zip
 ```
 
 GitHub Release 使用 ASCII 文件名：
 
 ```text
-Zhike-v2.1.5-macos-arm64.zip
-Zhike-v2.1.5-windows-x64.zip
+Zhike-v2.1.7-macos-arm64.zip
+Zhike-v2.1.7-windows-x64.zip
 ```
 
-同一平台的中文包与 ASCII 包字节完全相同，SHA-256 也必须相同。
+同一平台的中文包与 ASCII 包字节完全相同，SHA-256 也必须相同。两端核心 Python 模块采用 PyArmor Basic 混淆以提高逆向成本，但不代表无法破解。
 
 ## 3. 核对 SHA-256
 
 macOS 假设文件位于“下载”目录：
 
 ```bash
-shasum -a 256 "$HOME/Downloads/知客-v2.1.5-macos-arm64.zip"
+shasum -a 256 "$HOME/Downloads/知客-v2.1.7-macos-arm64.zip"
 # 从 GitHub 下载时改用：
-shasum -a 256 "$HOME/Downloads/Zhike-v2.1.5-macos-arm64.zip"
+shasum -a 256 "$HOME/Downloads/Zhike-v2.1.7-macos-arm64.zip"
 ```
 
 输出的第一列必须是：
 
 ```text
-337a3b8b2ac644ba1f5ea1ac22ffa9a561f086f40db46d05d0f5f88f8174371d
+b238b2608b2a8fd0065b3d1fdfae930b1d3616add2be8a438db0477bb5629d33
 ```
 
 Windows 在 PowerShell 中运行：
 
 ```powershell
-$File = "$HOME\Downloads\知客-v2.1.5-windows-x64.zip"
-# 从 GitHub 下载时改为：$File = "$HOME\Downloads\Zhike-v2.1.5-windows-x64.zip"
+$File = "$HOME\Downloads\知客-v2.1.7-windows-x64.zip"
+# 从 GitHub 下载时改为：$File = "$HOME\Downloads\Zhike-v2.1.7-windows-x64.zip"
 (Get-FileHash $File -Algorithm SHA256).Hash.ToLower()
 ```
 
 输出必须是：
 
 ```text
-6c2319bd102ae57e5786a2d9e11f577deb631e8b8d8ed4f31984b99f4b5f5f60
+e8c852d8f380dc81d21d62ddd91dfff9ea3b1efdc6f70997ad0f0fb731575557
 ```
 
 不一致时不要继续运行，请重新下载并再次核对。
@@ -71,7 +71,7 @@ $File = "$HOME\Downloads\知客-v2.1.5-windows-x64.zip"
 2. macOS 首次在 Finder 中右键 `启动.command`，选择“打开”并确认；如果仍被阻止，到「系统设置 → 隐私与安全性」点「仍要打开」。不要关闭 Gatekeeper，也不要运行移除 quarantine 的命令。
 3. Windows 双击 `启动.bat`；普通 SmartScreen 提示可选「更多信息 → 仍要运行」。如果 Smart App Control 直接阻止，当前未签名版无法运行，请勿为知客关闭系统安全功能，改为联系购买渠道处理。
 4. 保持启动窗口开启。首次准备运行环境需要数分钟，具体时间取决于网络。
-5. 看到浏览器打开 `http://127.0.0.1:8300` 且显示“知客 2.1.5”后，表示本机服务已启动。
+5. 看到浏览器打开 `http://127.0.0.1:8300` 且显示“知客 2.1.7”后，表示本机服务已启动。
 
 知客只监听本机地址。关闭启动终端窗口会停止软件。
 

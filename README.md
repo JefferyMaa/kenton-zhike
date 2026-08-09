@@ -19,28 +19,28 @@ Direct-message handling is on the product roadmap for upcoming versions.
 
 ## Current stable release
 
-Version: `v2.1.5`　Platforms: macOS Apple Silicon and Windows x64
+Version: `v2.1.7`　Platforms: macOS Apple Silicon and Windows x64
 
-The installer is a public download; core business features activate with an online license key.
+The installer is a public download; core business features activate with an online license key. Core Python modules use PyArmor Basic obfuscation to raise reverse-engineering cost, but this is not an “unbreakable” guarantee.
 
 ### macOS Apple Silicon
 
-- [Download v2.1.5 from the official site](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip)
-- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
-- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip.sha256)
+- [Download v2.1.7 from the official site](https://zhike.crewup.cn/dl/macos/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-macos-arm64.zip)
+- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.7)
+- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/macos/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-macos-arm64.zip.sha256)
 
 ```text
-337a3b8b2ac644ba1f5ea1ac22ffa9a561f086f40db46d05d0f5f88f8174371d
+b238b2608b2a8fd0065b3d1fdfae930b1d3616add2be8a438db0477bb5629d33
 ```
 
 ### Windows x64
 
-- [Download v2.1.5 from the official site](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip)
-- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
-- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip.sha256)
+- [Download v2.1.7 from the official site](https://zhike.crewup.cn/dl/windows/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-windows-x64.zip)
+- [View the GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.7)
+- [View the SHA-256 checksum file](https://zhike.crewup.cn/dl/windows/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-windows-x64.zip.sha256)
 
 ```text
-6c2319bd102ae57e5786a2d9e11f577deb631e8b8d8ed4f31984b99f4b5f5f60
+e8c852d8f380dc81d21d62ddd91dfff9ea3b1efdc6f70997ad0f0fb731575557
 ```
 
 ## Up and running in 5 minutes
@@ -75,14 +75,14 @@ Public comments may contain third-party personal information; use the tool in co
 - Zhike is an independent third-party tool with no affiliation with Douyin (ByteDance); automation carries platform-rule and account risk — assess it yourself.
 - Keyword matching can mis-hit; keep scripts accurate and current, and regularly check the comment area and send ledger.
 - Douyin page or API changes may affect functionality; we track them with releases.
-- The macOS build is not Apple-notarized; the Windows build is unsigned (SmartScreen may warn, and Smart App Control may block it). Do not disable system security to run Zhike. Both ship as plaintext Python under a soft license — no anti-reverse-engineering claims.
+- The macOS build is not Apple-notarized; the Windows build is unsigned (SmartScreen may warn, and Smart App Control may block it). Do not disable system security to run Zhike. Both packages use PyArmor Basic for core Python modules; it raises reverse-engineering cost but does not make the software unbreakable.
 
 ## Documentation
 
 - [Quickstart guide](docs/quickstart.md) (Chinese)
 - [Troubleshooting](docs/troubleshooting.md) (Chinese)
 - [Security policy](SECURITY.md)
-- [v2.1.5 release notes](docs/releases/v2.1.5.md) (Chinese)
+- [v2.1.7 release notes](docs/releases/v2.1.7.md) (Chinese)
 - [Official site](https://zhike.crewup.cn/)
 
 ## Purchase and support

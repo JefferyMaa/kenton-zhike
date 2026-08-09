@@ -19,28 +19,28 @@
 
 ## 当前正式版
 
-版本：`v2.1.5`　平台：macOS Apple Silicon、Windows x64
+版本：`v2.1.7`　平台：macOS Apple Silicon、Windows x64
 
-安装包公开下载，核心业务功能使用在线卡密激活。
+安装包公开下载，核心业务功能使用在线卡密激活。核心 Python 模块采用 PyArmor Basic 混淆以提高逆向成本，但不承诺“无法破解”。
 
 ### macOS Apple Silicon
 
-- [从知客官网下载 v2.1.5](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-macos-arm64.zip.sha256)
+- [从知客官网下载 v2.1.7](https://zhike.crewup.cn/dl/macos/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-macos-arm64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.7)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/macos/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-macos-arm64.zip.sha256)
 
 ```text
-337a3b8b2ac644ba1f5ea1ac22ffa9a561f086f40db46d05d0f5f88f8174371d
+b238b2608b2a8fd0065b3d1fdfae930b1d3616add2be8a438db0477bb5629d33
 ```
 
 ### Windows x64
 
-- [从知客官网下载 v2.1.5](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip)
-- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.5)
-- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.5/%E7%9F%A5%E5%AE%A2-v2.1.5-windows-x64.zip.sha256)
+- [从知客官网下载 v2.1.7](https://zhike.crewup.cn/dl/windows/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-windows-x64.zip)
+- [查看 GitHub Release](https://github.com/JefferyMaa/kenton-zhike/releases/tag/v2.1.7)
+- [查看 SHA-256 校验文件](https://zhike.crewup.cn/dl/windows/2.1.7/%E7%9F%A5%E5%AE%A2-v2.1.7-windows-x64.zip.sha256)
 
 ```text
-6c2319bd102ae57e5786a2d9e11f577deb631e8b8d8ed4f31984b99f4b5f5f60
+e8c852d8f380dc81d21d62ddd91dfff9ea3b1efdc6f70997ad0f0fb731575557
 ```
 
 ## 5 分钟上手
@@ -67,14 +67,14 @@
 - 知客是第三方独立工具，与抖音（字节跳动）官方无关联；自动化操作存在平台规则与账号风险，请自行评估。
 - 关键词匹配可能误命中，请只配置准确、仍然有效的话术，并定期检查评论区和发送账本。
 - 抖音页面或接口改版可能影响功能，我们随版本跟进。
-- macOS 侧未做 Apple 公证，Windows 侧未做代码签名（SmartScreen 可能提示，Smart App Control 可能直接阻止）；请勿为了运行知客关闭系统安全功能。两端均为明文 Python 软授权，不承诺防逆向。
+- macOS 侧未做 Apple 公证，Windows 侧未做代码签名（SmartScreen 可能提示，Smart App Control 可能直接阻止）；请勿为了运行知客关闭系统安全功能。两端核心 Python 模块均采用 PyArmor Basic 混淆，只提高逆向成本，不代表无法破解。
 
 ## 文档
 
 - [首次使用指南](docs/quickstart.md)
 - [故障排查](docs/troubleshooting.md)
 - [安全政策](SECURITY.md)
-- [v2.1.5 发布说明](docs/releases/v2.1.5.md)
+- [v2.1.7 发布说明](docs/releases/v2.1.7.md)
 - [知客官网](https://zhike.crewup.cn/)
 
 ## 获取卡密与支持
