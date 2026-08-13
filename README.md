@@ -94,3 +94,8 @@ To buy a license key, use the contact channels on the [official site](https://zh
 This repository publishes release notes and user documentation; the software itself is not open-source licensed. Use is governed by [LICENSE](LICENSE) and the Software License & Service Terms inside the package; third-party components keep their own licenses.
 
 <!-- name: Zhike | origin: Kenton | type: public-distribution | status: active -->
+
+## 联系 Kenton
+
+- 个人博客：[Kenton Blog](https://kenton.crewup.cn/)
+- 公开邮箱：[dilipkhandale351@gmail.com](mailto:dilipkhandale351@gmail.com)

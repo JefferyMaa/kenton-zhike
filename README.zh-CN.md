@@ -86,3 +86,8 @@ e8c852d8f380dc81d21d62ddd91dfff9ea3b1efdc6f70997ad0f0fb731575557
 本仓库公开发行说明与用户文档，软件本身不以开源许可证授权。软件、文档和发行包的使用受 [LICENSE](LICENSE) 及安装包内《软件授权与服务条款》约束；第三方组件适用各自许可证。
 
 <!-- name: 知客 | origin: Kenton | type: public-distribution | status: active -->
+
+## 联系 Kenton
+
+- 个人博客：[Kenton Blog](https://kenton.crewup.cn/)
+- 公开邮箱：[dilipkhandale351@gmail.com](mailto:dilipkhandale351@gmail.com)
